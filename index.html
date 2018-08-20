@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Macro calculator and information about the keto diet for weight loss. Also known as the Ketogenic Diet.">
+	<meta name="keywords" content="keto diet,ketogenic diet,keto,weight loss,ketosis,macronutrient,macro calculator,keto calculator,VLCKD,very low carb keto diet">
+	<meta name="author" content="Ring 42">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Keto Diet Information and Calculator</title>
+	<link rel="stylesheet" type="text/css" href="responsiveNav.css">
+	<link rel="stylesheet" type="text/css" href="ketoWeb.css">
+</head>
+<body>
+	<div id="topContainer">
+		<h1>Ketogenic Calculator</h1>
+		<div class="topnav" id="myTopnav">
+		  <a href="index.html" class="active">Calculator</a>
+		  <a href="easyketo.html">Easy Keto</a>
+		  <a href="dining.html">Eating Out</a>
+		  <a href="exercise.html">Exercise</a>
+		  <a href="javascript:void(0);" class="icon" onclick="myRespNav()">
+		    <i class="fa fa-bars"></i>
+		  </a>
+		</div>
+	</div>
+	<div id="inputArea">
+		<h3>Please enter your numbers and goals</h3>
+		<div class="flexContainer">
+			<div id="leftSide">
+				<form id="userInput">
+					Age: <input type="text" name="userAge" id="userAge" value="" size="3"><br>
+					<div>
+						Height: <input type="text" name="userFeet" id="userFeet" value="" size="3"> ft
+						<input type="text" name="userInches" id="userInches" value="" size="3"> in<br>
+					</div>
+					Weight: <input type="text" name="userLbs" id="userLbs" value="" size="4"> lbs<br><br>
+					What is your fitness goal?<br>
+					<input type="radio" name="fitGoal" value="lose"> Lose Weight<br>
+					<input type="radio" name="fitGoal" value="maintain"> Maintain Weight<br>
+					<input type="radio" name="fitGoal" value="gain"> Gain Weight<br><br>
+					Would you like to gain or maintain muscle?<br>
+					<input type="radio" name="proGoal" value="gain"> Gain Muscle<br>
+					<input type="radio" name="proGoal" value="maintain"> Maintain Muscle<br>
+				</form>
+			</div>
+			<div id="rightSide">
+				<form>
+					Gender<br>
+					<input type="radio" name="userGender" value="Male"> Male<br>
+					<input type="radio" name="userGender" value="Female"> Female<br><br>
+					What is your Activity Level?<br>
+					<input type="radio" name="userActivity" value="0"> Sedentary: Little to no exercise.<br>
+					<input type="radio" name="userActivity" value="1"> Light Activity: Exercise 1-3 times per week.<br>
+					<input type="radio" name="userActivity" value="2"> Moderate: Exercise 3-5 times per week.<br>
+					<input type="radio" name="userActivity" value="3"> Very Active: Heavy exercise 6-7 times per week.<br>
+					<input type="radio" name="userActivity" value="4"> Extremely Active: Exercise 2 times per day.<br>
+				</form>
+			</div>
+		</div>
+	</div>
+	<div class="flexContainer">
+		<div id="buttonArea">
+			<button type="button" form="userInput" name="submit" id="inputButton">Submit</button><button type="reset" form="userInput" value="Reset">Clear</button>
+		</div>
+	</div>
+	<div class="divider"></div>
+	<div id="macroArea">
+		<h3>Macronutrient Daily Intake:</h3>
+		<div class="flexContainer">
+			<div class="tableWrapper">
+				<table class="table">
+					<tr>
+						<th>Net Carbs</th>
+						<td></td>
+						<td class="dataOut1" id="carbG"></td>
+						<td>g</td>
+						<td class="dataOut1" id="carbCal"></td>
+						<td>cal</td>
+					</tr>
+					<tr>
+						<th>Proteins</th>
+						<td></td>
+						<td class="dataOut2" id="proG"></td>
+						<td>g</td>
+						<td class="dataOut2" id="proCal"></td>
+						<td>cal</td>
+					</tr>
+					<tr>
+						<th>Fats</th>
+						<td></td>
+						<td class="dataOut3" id="fatG"></td>
+						<td>g</td>
+						<td class="dataOut3" id="fatCal"></td>
+						<td>cal</td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<div class="divider"></div>
+	<div id="detailArea">
+		<h3>Detailed Information:</h3>
+		<div class="flexContainer">
+			<div class="tableWrapper">
+				<table class="table">
+					<tr>
+						<td>Body Mass Index: </td>
+						<td class="dataOut4" id="BMI"></td>
+					</tr>
+					<tr>
+						<td>Lean Body Mass</td>
+						<td class="dataOut4" id="LBM"></td>
+					</tr>
+					<tr>
+						<td>Basal Metabolic Rate</td>
+						<td class="dataOut4" id="BMR"></td>
+					</tr>
+					<tr>
+						<td>Total Daily Energy Expended</td>
+						<td class="dataOut4" id="TDEE"></td>
+					</tr>
+					<tr>
+						<td>Activity Level Multiplier</td>
+						<td class="dataOut4" id="activyLevel"></td>
+					</tr>
+					<tr>
+						<td>Minimum Caloric Intake</td>
+						<td class="dataOut4" id="minCalIn"></td>
+					</tr>
+					<tr>
+						<td>Maximum Caloric Intake</td>
+						<td class="dataOut4" id="maxCalIn"></td>
+					</tr>
+					<tr>
+						<td>Average Daily Calories</td>
+						<td class="dataOut4" id="meanCalIn"></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<script type="text/javascript" src="ketoweb_v3.js"></script>
+	<script type="text/javascript" src="responsiveNav.js"></script>
+</body>
+</html>
