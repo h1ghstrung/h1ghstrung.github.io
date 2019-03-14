@@ -101,10 +101,6 @@ table.table { width: 100%; }
   padding: 0.25em;
 }
 
-.table tr { 
-  border-bottom: 1px solid #DDD;
-}
-
 @media screen and (max-width: 800px) {
   tr { 
     display: flex; 
@@ -114,8 +110,10 @@ table.table { width: 100%; }
   }
   td, th {
     flex: 1 1 150px;
-    border-bottom: 0.5px solid rgba(3,3,3,0.2);
     max-width: 110px;
+  }
+  [class^="dataOut"] {
+    border-bottom: 0.5px solid rgba(3,3,3,0.5);
   }
   .divider {
   	background-image: url("images/elegant-div640.png");
